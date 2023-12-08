@@ -31,3 +31,25 @@
         margin-left: -2px;
         top: 0;
 }
+/* star animation */
+body{
+    margin:0;
+    overflow: hidden;
+}
+/* #floating-particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
+.fading-particle {
+    position: absolute;
+    width: 4px;
+    /* Adjust the particle width */
+    height: 4px;
+    /* Adjust the particle height */
+    background-color: #fff;
+    /* Particle color */
+    border-radius: 50%;
+    opacity: 0;
+}
