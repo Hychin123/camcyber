@@ -11,6 +11,9 @@
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+.containercyber:hover{
+    background-color: #179d86;
+}
 .sloganbanner{
     height: 5rem;
     width: 100%;
