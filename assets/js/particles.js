@@ -1,48 +1,44 @@
-// Fading particle configuration
-const fadingParticleConfig = {
-    particleCount: 100,
-    particleSize: 4,
-    fadeInOutSpeed: 0.002, // Adjust the fade in/out speed
+// Snowfall particle configuration
+const snowfallConfig = {
+    snowflakeCount: 150,
+    snowflakeSize: 2,
+    minSpeed: 1,
+    maxSpeed: 2,
 };
 
-// Initialize fading particles
-function initFadingParticles() {
-    const container = document.getElementById('fading-particles-container');
+// Initialize snowfall particles
+function initSnowfallParticles() {
+    const container = document.getElementById('snowfall-container');
 
-    for (let i = 0; i < fadingParticleConfig.particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'fading-particle';
-        container.appendChild(particle);
+    for (let i = 0; i < snowfallConfig.snowflakeCount; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        container.appendChild(snowflake);
 
-        animateFadingParticle(particle);
+        animateSnowflake(snowflake);
     }
 }
 
-// Animate fading particle movement
-function animateFadingParticle(particle) {
+// Animate snowflake movement
+function animateSnowflake(snowflake) {
     const startX = Math.random() * window.innerWidth;
     const startY = Math.random() * window.innerHeight;
+    const speedY = snowfallConfig.minSpeed + Math.random() * (snowfallConfig.maxSpeed - snowfallConfig.minSpeed);
 
-    const speedY = 0.3 * Math.random() + 0.05;
-
-    particle.style.width = `${fadingParticleConfig.particleSize}px`;
-    particle.style.height = `${fadingParticleConfig.particleSize}px`;
-    particle.style.top = `${startY}px`;
-    particle.style.left = `${startX}px`;
+    snowflake.style.width = `${snowfallConfig.snowflakeSize}px`;
+    snowflake.style.height = `${snowfallConfig.snowflakeSize}px`;
+    snowflake.style.top = `${startY}px`;
+    snowflake.style.left = `${startX}px`;
 
     function update() {
-        const rect = particle.getBoundingClientRect();
+        const rect = snowflake.getBoundingClientRect();
         const posY = rect.top + speedY;
 
         if (posY > window.innerHeight) {
-            particle.style.top = `0px`;
-            particle.style.left = `${Math.random() * window.innerWidth}px`;
-            particle.style.opacity = 0;
+            snowflake.style.top = `0px`;
+            snowflake.style.left = `${Math.random() * window.innerWidth}px`;
         } else {
-            particle.style.top = `${posY}px`;
-            if (particle.style.opacity < 1) {
-                particle.style.opacity = parseFloat(particle.style.opacity) + fadingParticleConfig.fadeInOutSpeed;
-            }
+            snowflake.style.top = `${posY}px`;
         }
 
         requestAnimationFrame(update);
@@ -51,5 +47,5 @@ function animateFadingParticle(particle) {
     update();
 }
 
-// Initialize fading particles on window load
-window.onload = initFadingParticles;
+// Initialize snowfall particles on window load
+window.onload = initSnowfallParticles;
