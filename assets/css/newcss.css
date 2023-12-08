@@ -11,3 +11,23 @@
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+.containercyber:hover{
+    background-color: #179d86;
+}
+.sloganbanner{
+    height: 5rem;
+    width: 100vw;
+    overflow: hidden;
+    margin-top: 5%;
+    padding: 1.5rem 0rem;  
+    bottom: 0;
+}
+.sloganbannerborder{
+    border: 2px solid white;
+        position: absolute;
+        border-top-right-radius: 202vw;
+        height: 1000px;
+        width: 142.5vw;
+        margin-left: -2px;
+        top: 0;
+}

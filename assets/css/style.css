@@ -13,6 +13,7 @@
   --font-semibold: 600;
   --font-medium: 500;
   --font-normal: 400;
+  background-color: var(--interface-1);
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Bayon&family=Bokor&family=Kantumruy+Pro:wght@300&display=swap');
@@ -503,7 +504,7 @@ h6 {
   font-family: 'Bokor', sans-serif;
   font-size: 60px;
   font-weight: var(--font-bold);
-  color: var(--white);
+  color: #179d86;
   line-height: 1.3;
   margin-bottom: 30px;
 }
@@ -516,6 +517,7 @@ h6 {
   margin-bottom: 30px;
 }
 .aai-hero-one-desc {
+
   font-family: 'Kantumruy+Pro', sans-serif;
   font-size: var(--text-xl);
   color: var(--interface-3);
@@ -530,11 +532,10 @@ h6 {
   padding: 150px 0 200px;
 }
 .aai-hero-two-title {
-  font-size: 72px;
-  font-weight: var(--font-bold);
+  
+  font-size: 40px;
   color: var(--white);
   line-height: 1.3;
-  margin-bottom: 30px;
 }
 .aai-hero-two-desc {
   max-width: 680px;
