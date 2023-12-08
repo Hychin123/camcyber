@@ -1,0 +1,13 @@
+.camcybertitle{
+    font-family: 'bayon', sans-serif;
+}
+.containercyber{
+    padding:1rem 1rem;
+    display: flex;
+    border:1px solid white;
+    margin:auto;
+    width: 250px;
+    justify-content: center;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
