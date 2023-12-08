@@ -11,3 +11,11 @@
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
+.sloganbanner{
+    height: 5rem;
+    width: 100vw;
+    overflow: hidden;
+    margin-top: 10%;
+    padding: 1.5rem 0rem;  
+    bottom: 0;
+}
